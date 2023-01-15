@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "buttersb",
+  "version": "${version}",
+  "name": "Butter SB",
+  "description": "QOL Utilities for playing Hypixel Skyblock",
+  "authors": [
+    "Me!"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/buttersb",
+    "sources": "https://github.com/RocKing1001/ButterSB/"
+  },
+  "license": "MIT",
+  "icon": "assets/buttersb/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "value": "me.piguy.buttersb.ButterSB",
+        "adapter": "kotlin"
+      }
+    ],
+    "client": [
+      {
+        "value": "me.piguy.buttersb.ButterSBClient",
+        "adapter": "kotlin"
+      }
+    ]
+  },
+  "mixins": [
+    "buttersb.mixins.json",
+    {
+      "config": "buttersb.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.12",
+    "minecraft": "~1.19.3",
+    "java": ">=17",
+    "fabric-api": "*",
+    "fabric-language-kotlin": ">=1.8.0"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
